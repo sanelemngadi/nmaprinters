@@ -1,0 +1,114 @@
+.store-hero_cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .25rem;
+    margin-top: 1rem;
+
+    @include device($sm){
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+    }
+
+    @include device($lg){
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    li{
+        list-style: none;     
+        width: 100%;
+        border-radius: .25rem;
+        min-height: 240px;
+        padding: .5rem;
+        border: 2px solid transparent;
+        align-items: center;
+        display: block;
+        background-color: $mid-gray;
+
+        @include device($sm){
+            max-width: 280px;
+            padding: .25rem .5rem;
+        }
+        @include device($lg){
+            padding: 1rem 1.5rem;
+        }
+
+        &:hover{
+            box-shadow: .1rem .1rem .25rem .25rem rgba($black,0.1);
+            border-color: rgba($pale-black, .1);
+        }
+
+        // button#add-to-cart{
+            // display: inline-flex;
+            // align-items: center;
+            // justify-content: center;
+            // padding: .25rem .5rem;
+            // border-radius: .25rem;
+            // background-color: transparent;
+            // border: 1px solid $pale-black;
+            // font-size: 10px;
+            // font-weight: 600;
+            // float: right;
+
+            // &:hover{
+                // cursor: pointer;
+                // background: linear-gradient(to right, $purple, $pink);
+                // color: $white;
+                // border-color: $purple;
+            // }
+        // }
+    }
+
+    li a{
+        // border: $bb;
+        //d@include center-x();
+        display: block;
+        text-decoration: none;
+        color: $black;
+
+        .image{
+            @include center-x();
+            align-items: center;
+            padding: 1rem;
+            max-width: 152px;
+            max-height: 152px;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        p, h3{
+            padding-bottom: 1rem;
+        }
+
+        p{
+            line-height: 1.25;
+        }
+    }
+
+    li .btns{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: .25rem .5rem;
+            border-radius: .25rem;
+            background-color: transparent;
+            border: 1px solid $pale-black;
+            font-size: 10px;
+            font-weight: 600;
+            float: right;
+
+            &:hover{
+                cursor: pointer;
+                background: linear-gradient(to right, $purple, $pink);
+                color: $white;
+                border-color: $orange;
+            }
+        }
+    }
+}

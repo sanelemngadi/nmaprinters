@@ -1,0 +1,41 @@
+{% load static %}
+<div class="header-banner">
+    <div class="humburger">
+        <i class="fa-sharp fa-solid fa-bars fa-2xl"></i>
+    </div>
+    <h1 class="logo">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'vectors/logo.svg' %}" alt="">
+        </a>
+    </h1>
+    <div class="nma_nav">
+        <div>
+            <input type="search" placeholder=" Search" name="" id="search">
+             <nav>
+                 <ul>
+                    <li class="links"><a href="{% url 'services' %}">Services</a></li>
+                    <li class="links"><a href="{% url 'about-us' %}">About</a></li>
+                    <li class="links"><a href="{% url 'contact-us' %}">Contact</a></li>
+                    <li class="links-icons"><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                    <li class="links-icons"><a href="#">
+                        <i class="fa-regular fa-cart-shopping"></i>
+                    </a></li>
+                 </ul>
+             </nav>
+        </div>
+    </div>
+    <div class="cta">
+        <a href="#">
+            <h2>Shop</h2>
+            <p>Get our ready made designs</p>
+        </a>
+        <a href="#">
+            <h2>Design</h2>
+            <p>Get custom designs</p>
+        </a>
+        <a href="#">
+            <h2>Order in bulk</h2>
+            <p>Get a quote</p>
+        </a>
+    </div>
+</div>

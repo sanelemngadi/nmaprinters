@@ -1,0 +1,371 @@
+// ##################################################################
+// About styles
+// ##################################################################
+// About use styles
+.about-hero{
+    background-color: $mid-gray;
+
+    .about-hero_content{
+        width: 100%;
+        padding: 1rem 0;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            row-gap: .5rem;
+            li{
+                padding: 0 .5rem;
+                list-style: none;
+                font-size: .7rem;
+                color: $purple;
+            }
+        }
+
+        h1{
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: .3rem;
+            color: $black;
+
+            @include device($md){
+                font-size: 3rem;
+            }
+        }
+
+        h4{
+            color: $pale-black;
+        }
+
+        p{
+            max-width: $point-unit * 79;
+            font-size: 1rem;
+            margin-top: 1rem;
+            color: lighten($black, 30);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.interests{
+    .interests-content{
+        width: 100%;
+        padding: 1rem 0;
+
+        @include device($md){
+            padding: 2rem 0;
+        }
+
+        @include device($xl){
+            background-image: url("/static/vectors/logo.svg");
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 577px 433px;
+            // background-size: contain;
+            // background-attachment: fixed;
+        }
+
+        .interests-heading{
+            font-size: 2rem;
+            font-family: $chivo-font;
+            margin-bottom: .5rem;
+        }
+
+        .history-mission{
+            h3{
+                width: 4rem;
+                text-transform: uppercase;
+                margin-bottom: .25rem;
+                color: $purple;
+            }
+            p{
+                max-width: $point-unit * 60;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+                line-height: 1.25;
+                color: lighten($black, 20);
+            }
+
+            @include device($md){
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+.values{
+    .values-content{
+        width: 100%;
+    }
+
+    .values-heading{
+        font-size: 2rem;
+        color: lighten($black, 60);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        
+        @include device($md){
+            margin-bottom: 2rem;
+            font-size: 3rem;
+        }
+
+        @include init-suedo(){
+            width: 100%;
+            height: 2px;
+            background: $gradient;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .primary-values, .secondary-values{
+        h2{
+            margin-bottom: .5rem;
+        }
+        p{
+            max-width: $point-unit * 60;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.25;
+            color: lighten($black, 20);
+        }
+    }
+
+    .secondary-values{
+        li{
+            list-style: none;
+        }
+    }
+
+    // .primary-values{
+        // display: flex;
+        // gap: 1rem;
+    // }
+
+    @include device($sm){
+        .values-heading{
+            font-size: 3rem;
+        }
+        .primary-values{
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+
+        .secondary-values{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            li{
+                list-style: none;
+                h2{
+                    font-size: 1.5rem;
+                }
+                p{
+                    max-width: $point-unit * 41;
+                }
+            }
+
+        }
+    }
+
+    @include device($md){
+        .values-heading{
+            margin: 3rem 0;
+        }
+        .primary-values{
+            width: 100%;
+            margin-bottom: 2rem;
+            .quality, .innovation{
+                display: flex;
+                justify-content: space-between;
+                h2{
+                    font-size: 3rem;
+                    display: flex;
+                    flex-direction: column;
+                    text-transform: uppercase;
+                    // font-family: $chivo-font;
+                    margin-right: 1rem;
+
+                    span:nth-child(2){
+                        color: $pink;
+                    }
+                }
+
+                p{
+                    max-width: $point-unit * 41;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        .secondary-values{
+            li{
+                h2{
+                    font-size: 2rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    span:nth-child(2){
+                        font-size: 1rem;
+                        color: $pink;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @include device($lg){
+        .primary-values{
+            margin-bottom: 3rem;
+        }
+
+        .secondary-values{
+            margin: 4rem 0;
+        }
+    }   
+}
+
+.members{
+    margin: 1rem 0;
+
+    .members-content{
+        width: 100%;
+
+        li{
+            list-style: none;
+        }
+
+        .members-heading{
+            font-size: 1.5rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            max-width: $point-unit * 60;
+            color: lighten($black, 40);
+        }
+        h4{
+            font-size: 1.25rem;
+            margin: .5rem 0;
+            color: lighten($black, 20);
+        }
+        p{
+            max-width: $point-unit * 41;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.25;
+            color: lighten($black, 30);
+        }
+
+        @include device($md){
+            .members-heading{
+                max-width: $point-unit * 20;
+                margin-top: 1rem;
+            }
+
+            .primary{
+                display: flex;
+                gap: 1rem;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+
+                ul{
+                    display: flex;
+                }
+            }
+
+            .secondary{
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                }
+            }
+        }
+
+        @include device($lg){
+            display: block;
+            p{
+                max-width: $point-unit * 67;
+            }
+            .members-heading{
+                max-width: $point-unit * 79;
+                font-size: 2.5rem;
+                margin-top: 1rem;
+            }
+
+            .primary{
+                display: block;
+                ul{
+                    justify-content: space-between;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.founders{
+    .founders-content{
+        width: 100%;
+        margin: 1rem auto;
+        li{
+            width: 100%;
+            list-style: none;
+            justify-content: space-around;
+            @include device($sm){
+                display: flex;
+                gap: 1rem;
+                // border: $bb;
+                margin: 3rem auto;
+
+                &:nth-child(2){
+                    flex-direction: row-reverse;
+                }
+            }
+            .member-info{
+                margin: 1rem 0;
+            }
+            .strong{
+                font-weight: 600;
+                font-size: .9rem;
+            }
+            .member-name{
+                font-weight: 600;
+                text-decoration: underline;
+                color: darken($purple, 20);
+            }
+            .member-image{
+                aspect-ratio: 1/1;
+                width: 100%;
+                max-width: $standard-height *10;
+                border: $rb;
+                background-color: $mid-gray;
+                border-radius: .25rem;
+
+                @include init-suedo(){
+                    top: 50%;
+                    left: 50%;
+                    content: "1 x 1";
+                    font-size: 4rem;
+                    color: lighten($black, 60);
+                    transform: translate(-50%, -50%);
+                }
+            }
+            p{
+                max-width: $point-unit * 41;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+                line-height: 1.25;
+                color: lighten($black, 30);
+            }
+        }
+    }
+}
+
+// end styles
+// ##################################################################
+// End of about styles
+// ##################################################################

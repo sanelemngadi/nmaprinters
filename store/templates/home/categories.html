@@ -1,0 +1,50 @@
+{% load static %}
+<aside class="categories">
+    <h2 style="margin-left: 1rem; margin-bottom: .5rem;">Categories</h2>
+<ul class="category-items">
+    <li class="top-item category-item current" data-name="all items">All items</li>
+    <li class="top-item category-item" data-name="Sweaters">Sweaters</li>
+    <li class="top-item category-item" data-name="Hoodies">Hoodies</li>
+    <li class="sub-category active">
+        <p class="sub-category-item" data-name="T shirts" role="button" aria-expanded="true">
+            T shirts
+            <img src="{% static 'vectors/dropdown.svg' %}" alt="dropdown arrow">
+        </p>
+        <ul>
+            <li class="sub-item category-item" data-name="Long Sleeve">Long Sleeve</li>
+            <li class="sub-item category-item" data-name="Short Sleeve">Short Sleeve</li>
+        </ul>
+    </li>
+    <li class="sub-category">
+        <p class="sub-category-item" data-name="Golfers">
+            Golfers
+            <img src="{% static 'vectors/dropdown.svg' %}" alt="dropdown arrow">
+        </p>
+        <ul>
+            <li class="sub-item category-item" data-name="Long Sleeve">Long Sleeve</li>
+            <li class="sub-item category-item" data-name="Short Sleeve">Short Sleeve</li>
+        </ul>
+    </li>
+    <li class="sub-category">
+        <p class="sub-category-item" data-name="Pants">
+            Pants
+            <img src="{% static 'vectors/dropdown.svg' %}" alt="dropdown arrow">
+        </p>
+        <ul>
+            <li class="sub-item category-item" data-name="Long Pants">Long Pants</li>
+            <li class="sub-item category-item" data-name="Short Pants">Shorts</li>
+        </ul>
+    </li>
+    <li class="sub-category">
+        <p class="sub-category-item" data-name="Headwear">
+            Headwear
+            <img src="{% static 'vectors/dropdown.svg' %}" alt="dropdown arrow">
+        </p>
+        <ul>
+            <li class="sub-item category-item" data-name="Caps">Caps</li>
+            <li class="sub-item category-item" data-name="Beanies">Beanies</li>
+            <li class="sub-item category-item" data-name="Bucket hat">Bucket hat</li>
+        </ul>
+    </li>
+</ul>
+</aside>

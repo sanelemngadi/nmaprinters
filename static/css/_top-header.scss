@@ -1,0 +1,45 @@
+.header_top{
+    background-color: $mid-gray;
+}
+
+.header_contact{
+    display: flex;
+    align-items: center;
+    height: $standard-height;
+    width: 100%;
+    background-color: $mid-gray;
+    a{
+        color: $black;
+    }
+    .header_contact-email{
+        display: none;
+        min-width: 223px;
+
+        @include device($sm){
+            @include center-y();
+            min-width: 180px;
+        }
+        @include device($md){
+            min-width: 223px;
+        }
+        a{
+            margin-left: 1rem;
+        }
+    }
+
+    .header_contact-icons{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include device($sm){
+            margin-left: 1rem;
+        }
+        div{
+            display: flex;
+            &.icons{
+                gap: 1.5rem;
+            }
+        }
+    }
+}

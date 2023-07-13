@@ -1,0 +1,84 @@
+{% extends "nma-base.html" %}
+{% load static %}
+
+{%block title %}
+Contact us | NMA Printers
+{% endblock %}
+
+{% block content %}
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero_content">
+            <ul>
+                <li>#NMAPrinters</li>
+                <li>#ProductOfferings</li>
+                <li>#CustomPrinting</li>
+                <li>#ApparelPrinting</li>
+            </ul>
+            <h1>Wanna talk?</h1>
+            <p>Contact us today to discuss your requirements and let us help you bring your vision to life.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container">
+        <div class="faq-content">
+            <h1 class="top-header">Frequently Asked Questions</h1>
+            <p class="top-message">Before contacting our team members please read FAQ to save time.</p>
+
+            <ul class="q-n-a">
+                <li>
+                    <h4>Lorem ipsum dolor sit amet?</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor expedita minus dolorum assumenda nesciunt quae, accusantium provident temporibus? Expedita, error.</p>
+                </li>
+                <li>
+                    <h4>Lorem ipsum dolor sit amet?</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor expedita minus dolorum assumenda nesciunt quae, accusantium provident temporibus? Expedita, error.</p>
+                </li>
+                <li>
+                    <h4>Lorem ipsum dolor sit amet?</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor expedita minus dolorum assumenda nesciunt quae, accusantium provident temporibus? Expedita, error.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="contact-us">
+<div class="container">
+    <div class="contact-us_content">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>admin@nmaprinter.com</p>
+            <p>+2730932334</p>
+            <p>icons</p>
+
+            <ul class="working-hours">
+                <li><span class="day">Monday</span> <span>8AM - 5PM</span></li>
+                <li><span class="day">Tuesday</span> <span>8AM - 5PM</span></li>
+                <li><span class="day">Wednesday</span> <span>8AM - 5PM</span></li>
+                <li><span class="day">Thursday</span> <span>8AM - 5PM</span></li>
+                <li><span class="day">Friday</span> <span>8AM - 5PM</span></li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="map-locator">
+    <div class="container">
+        <div class="map-locator_content">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13840.381419004885!2d30.976159350000003!3d-29.86152375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1689189228661!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

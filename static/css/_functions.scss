@@ -1,0 +1,40 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin device($size){
+    @media screen and (min-width: $size){
+        @content;
+    }
+}
+
+@mixin center-y(){
+    display: flex;
+    align-items: center;
+}
+
+@mixin center-x(){
+    display: flex;
+    justify-content: center;
+}
+
+@mixin center($display: flex){
+    display: $display;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grad($dir: right){
+    background: linear-gradient(to $dir, $purple, $orange, $pink);
+}
+
+@mixin init-suedo($pos: before){
+    position: relative;
+    &::#{$pos}{
+        content: "";
+        position: absolute;
+        display: block;
+        @content;
+    }
+}

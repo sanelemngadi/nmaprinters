@@ -1,0 +1,184 @@
+.contact-hero{
+    background-color: $mid-gray;
+
+    .contact-hero_content{
+        width: 100%;
+        padding: 1rem 0;
+        
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            row-gap: .5rem;
+            li{
+                padding: 0 .5rem;
+                list-style: none;
+                font-size: .7rem;
+                color: $purple;
+            }
+        }
+
+        h1{
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: .3rem;
+            color: $black;
+
+            @include device($md){
+                font-size: 3rem;
+            }
+        }
+        p{
+            max-width: $point-unit * 45;
+            font-size: 1rem;
+            // margin-top: 1rem;
+            color: lighten($black, 30);
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
+.faq{
+    .faq-content{
+        width: 100%;
+        .top-header{
+            font-family: $chivo-font;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+
+        }
+        .top-message{
+            margin-top: .5rem;
+            color: lighten($black, 30);
+            max-width: $point-unit * 92;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @include device($md){
+            .top-header{
+                font-size: 2rem;
+            }
+
+            .top-message{
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+        @include device($lg){
+            .top-header{
+                font-size: 2.5rem;
+            }
+        }
+
+        .q-n-a{
+            p{
+                max-width: $point-unit * 70;
+                font-size: 1rem;
+                // margin-top: 1rem;
+                color: lighten($black, 30);
+                line-height: 1.3;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.contact-us{
+    .contact-us_content{
+        width: 100%;
+
+        @include device($md){
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+        p, li{
+            margin-top: .5rem;
+            color: lighten($black, 30);
+            max-width: $point-unit * 92;
+            font-size: 1rem;
+            // margin-bottom: 1rem;
+        }
+
+        .working-hours{
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+            width: 100%;
+
+            li{
+                list-style: none;
+            }
+            .day{
+                display: inline-block;
+                font-weight: 600;
+                width: 7rem;
+            }
+        }
+
+        .contact-form{
+            width: 100%;
+            p{
+                display: flex;
+                flex-direction: column;
+                @include device($md){
+                    margin-left: auto;
+                }
+
+                input{
+                    height: $standard-height !important;
+                    margin-top: .25rem;
+                    margin-bottom: 1rem;
+                    background-color: $mid-gray;
+                    color: $black;
+                    border: 1px solid $purple;
+                    border-radius: .15rem;
+                    padding-left: 1rem;
+                    
+                    &:focus{
+                        border: 1px solid $orange;
+                        outline: none;
+                    }
+                }
+                
+                textarea{
+                    padding-left: 1rem;
+                    margin-top: .5rem;
+                }
+            }
+
+            input[type="submit"]{
+                padding: .5rem 2rem;
+                @include center();
+                background-color: $purple;
+                border: none;
+                border-radius: .25rem;
+                margin: 1rem;
+                color: $white;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: darken($purple, 20);
+                }
+                
+                @include device($md){
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+.map-locator{
+    background-color: $mid-gray;
+    .map-locator_content{
+        width: 100%;
+
+        iframe{
+            width: 100%;
+            height: $standard-height * 9;
+        }
+    }
+}

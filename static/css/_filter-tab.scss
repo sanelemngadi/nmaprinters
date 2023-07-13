@@ -1,0 +1,38 @@
+div.filter-tab{
+    background-color: $mid-gray;
+    border-radius: .25rem;
+    overflow-x: hidden;
+    max-width: 100%;
+
+    .buttons{
+        display: flex;
+        min-height: $standard-height;
+        border-radius: .25rem;
+        padding: 3px 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            height: $standard-height;
+            padding: 0 .5rem;
+            border-radius: .25rem;
+            user-select: none;
+            margin: .25rem;
+            background-color: $mid-gray;
+
+            &.active, &.active:hover{
+                background-color: $purple;
+                color: $white;
+            }
+            &:hover{
+                cursor: pointer;
+                background-color: darken($mid-gray, 10);
+                color: $black;
+            }
+        }
+    }
+}

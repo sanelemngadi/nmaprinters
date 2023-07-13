@@ -1,0 +1,119 @@
+section.meet-nma{
+    @include center();
+    background-image: url("/static/vectors/meetnma.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @include device($sm){
+        margin-top: 2rem;
+    }
+    @include device($md){
+        margin-top: 3rem;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        background-color: rgba($white, .5);
+        border-radius: .5rem;
+        margin: 1rem auto;
+        // max-width: $point-unit * 60;
+        width: fit-content;
+
+        @include device($sm){
+            font-size: 2rem;
+        }
+
+        @include device($md){
+            font-size: 3rem;
+            margin-top: 2.5rem;
+        }
+    }
+
+    .meet-nma_cards{
+        display: grid;
+        gap: 1rem;
+        // flex-direction: column;
+        margin: 2rem auto;
+        grid-template-areas: "first" "second" "third";
+        transition: all .5s ease-in-out;
+
+        @include device($sm){
+            grid-template-areas: "first first . . " 
+                                " first first third third"
+                                " first first third third"
+                                " . . third third"
+                                ". second second ."
+                                ". second second ."
+                                ". second second ."
+                                ;
+        }
+        @include device($md){
+            grid-template-areas: "first first . ."
+                                "first first second second"
+                                "first first second second"
+                                ". . second second"
+                                ". third third ."
+                                ". third third ."
+                                ". third third ."
+                                ;
+
+            p, a{
+                font-size: 1rem;
+            }
+        }
+        @include device($lg){
+            grid-template-areas: "first first . . . ." 
+                                "first first second second . ." 
+                                "first first second second third third" 
+                                ". . second second third third" 
+                                ". . . .third third";
+        }
+
+        li:nth-child(1){
+            grid-area: first;
+        }
+        li:nth-child(2){
+            grid-area: second;
+        }
+        li:nth-child(3){
+            grid-area: third;
+        }
+
+        li{
+            max-width: $point-unit * 47;
+            // border: $rb;
+            list-style: none;
+            background-color: $white;
+            border-radius: 1rem;
+            padding: 1rem;          
+            h2{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            p{
+                text-align: center;
+                margin-bottom: 1rem;
+                max-width: $point-unit * 37;
+                color: lighten($pale-black, 20);
+                padding: 0 1rem;
+            }
+            a{
+                text-align: center;
+                color: $purple;
+            }
+        }
+
+       @include device($lg){
+        li{
+            transition: $trans;
+            &:hover{
+                transform: translateY(-.5rem);
+                box-shadow: $shadow;
+            }
+        }
+       }
+    }
+}

@@ -1,0 +1,151 @@
+@import "variables";
+
+@import "functions";
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: $chivo-font;
+    font-size: 13px;
+    transition: all .3s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $headings-font;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    //overflow: hidden;
+    position: relative;
+
+    @include device($sm){
+      padding: 0 1rem;
+      max-width: 540px;
+    }
+
+    @include device($md){
+        max-width: 720px;
+    }
+
+    @include device($lg){
+        max-width: 960px;
+    }
+
+    @include device($xl){
+        max-width: 1140px;
+    }
+}
+
+@import "top-header";
+@import "banner-header";
+
+@import "./filter-tab";
+
+@import "categories";
+
+.store-hero{
+    display: flex;
+    margin-top: .5rem;
+    
+    @include device($sm){
+        gap: 1rem;
+    }
+    .store-hero_items{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@import "store-cards";
+
+#scroller{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: $shadow;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border: $pale-border;
+    transform: translateY(50px);
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    user-select: none;
+
+    img{
+        transform: rotate(180deg);
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &.show{
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+///////////////////////////// headlines
+#headlines{
+    height: 96px;
+
+    .category-heading{
+        font-size: 2em;
+        margin: 1rem;
+    }
+
+    #category-filter{
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+.more-items{
+    @include center();
+    height: calc($standard-height * 3);
+    width: 100%;
+
+    a{
+        @include center();
+        height: $standard-height;
+        padding: .5rem 1rem;
+        // border: $rb;
+        background-color: $purple;
+        color: $white;
+        font-family: $headings-font;
+        text-decoration: none;
+        min-width: $point-unit * 20;
+        border-radius: .25rem;
+
+        &:hover{
+            background-color: darken($purple, 10);
+        }
+    }
+}
+
+@import "meet-nma";
+
+
+@import "footer";
+
+@import "about/about";
+@import "services/services";
+
+@import "contact/contact";
