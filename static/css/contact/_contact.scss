@@ -106,7 +106,7 @@
         .working-hours{
             margin-bottom: 2rem;
             margin-top: 1rem;
-            width: 100%;
+            // width: 100%;
 
             li{
                 list-style: none;
@@ -119,7 +119,15 @@
         }
 
         .contact-form{
-            width: 100%;
+            // width: 100%;
+
+            @include device($lg){
+                // background-color: $bb;
+
+
+                width: 70%;
+            }
+            
             p{
                 display: flex;
                 flex-direction: column;

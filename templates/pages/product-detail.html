@@ -1,0 +1,132 @@
+{% extends "nma-base.html" %}
+{% load static %}
+
+{%block title %}
+Product name - description | NMA Printers
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="product-details">
+        <div class="container">
+            <div class="product-details_content">
+                 <h4 class="detail-category">T-shirt / Women / name</h4>
+                <div class="details">
+                    <div class="detail-images">
+                        <div class="side-images">
+                            <ul>
+                                <li>
+                                    <img src="{% static 'images/beanie.png' %}" alt="">
+                                </li>
+                                <li>
+                                    <img src="{% static 'images/beanie.png' %}" alt="">
+                                </li>
+                                <li>
+                                    <img src="{% static 'images/beanie.png' %}" alt="">
+                                </li>
+                                <li>
+                                    <img src="{% static 'images/beanie.png' %}" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-image">
+                            <img src="{% static 'images/beanie.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="detail-info">
+                        <h3 class="heading">Ladies Colour Range T-Shirt (Select Colours)</h3>
+                        <h3 class="price">R199.99</h3>
+                        <div class="rates">4.5</div>
+                        <div class="inputs">
+                            <label for="quantiy">Quantiy: 
+                                <input type="number" name="quatity" id="quantiy" value="1" min="1"/>
+                            </label>
+                            <a href="#">Customize Design</a>
+                        </div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+                <h3 class="product-description_header">Description:</h3>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, necessitatibus dolor quaerat, fuga laboriosam eveniet cumque dolore maiores placeat autem ullam! Officia doloremque alias laboriosam, aperiam similique dolores deserunt facere obcaecati itaque, quisquam tenetur quo nemo autem totam. Nesciunt perferendis dolorem nihil minus in quisquam possimus. Aut reprehenderit impedit quisquam!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="related-products">
+        <div class="container">
+            <div class="related-products_content">
+                <h2>Related Products</h2>
+                <div class="related-cards">
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews_content">
+                <h2 class="heading">Reviews <span>(1 of 3)</span></h2>
+    
+                <ul>
+                    <li class="review-card">
+                        <div class="heading">
+                            <h3>Pretty awesome</h3>
+                            <button>Delete Review</button>
+                        </div>
+                        <div class="ratings">ss</div>
+                        <p class="name-date">Sanele Mngadi - <span class="date">10/03/2024</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, totam laboriosam. Suscipit minima consectetur nemo dolores inventore illo. Quia, earum dolorum sunt eaque rem, quibusdam modi consequuntur suscipit quam, tempora enim perspiciatis. Optio blanditiis nostrum quae fuga voluptatibus sequi, quibusdam provident harum voluptates rerum sapiente hic sint itaque cumque accusamus.</p>
+                        <div class="reactions">
+                            <button class="sharp">Sharp</button>
+                            <button class="not-sharp">Not Sharp</button>
+                        </div>
+                    </li>
+                    <li class="review-card">
+                        <div class="heading">
+                            <h3>Pretty awesome</h3>
+                            <button>Delete Review</button>
+                        </div>
+                        <div class="ratings">ss</div>
+                        <p class="name-date">Sanele Mngadi - <span class="date">10/03/2024</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, totam laboriosam. Suscipit minima consectetur nemo dolores inventore illo. Quia, earum dolorum sunt eaque rem, quibusdam modi consequuntur suscipit quam, tempora enim perspiciatis. Optio blanditiis nostrum quae fuga voluptatibus sequi, quibusdam provident harum voluptates rerum sapiente hic sint itaque cumque accusamus.</p>
+                        <div class="reactions">
+                            <button class="sharp">Sharp</button>
+                            <button class="not-sharp">Not Sharp</button>
+                        </div>
+                    </li>
+                    <li class="review-card">
+                        <div class="heading">
+                            <h3>Pretty awesome</h3>
+                            <button>Delete Review</button>
+                        </div>
+                        <div class="ratings">ss</div>
+                        <p class="name-date">Sanele Mngadi - <span class="date">10/03/2024</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, totam laboriosam. Suscipit minima consectetur nemo dolores inventore illo. Quia, earum dolorum sunt eaque rem, quibusdam modi consequuntur suscipit quam, tempora enim perspiciatis. Optio blanditiis nostrum quae fuga voluptatibus sequi, quibusdam provident harum voluptates rerum sapiente hic sint itaque cumque accusamus.</p>
+                        <div class="reactions">
+                            <button class="sharp">Sharp</button>
+                            <button class="not-sharp">Not Sharp</button>
+                        </div>
+                    </li>
+                    <li class="review-card">
+                        <div class="heading">
+                            <h3>Pretty awesome</h3>
+                            <button>Delete Review</button>
+                        </div>
+                        <div class="ratings">ss</div>
+                        <p class="name-date">Sanele Mngadi - <span class="date">10/03/2024</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, totam laboriosam. Suscipit minima consectetur nemo dolores inventore illo. Quia, earum dolorum sunt eaque rem, quibusdam modi consequuntur suscipit quam, tempora enim perspiciatis. Optio blanditiis nostrum quae fuga voluptatibus sequi, quibusdam provident harum voluptates rerum sapiente hic sint itaque cumque accusamus. <button class="read-more">read more</button></p>
+                        <div class="reactions">
+                            <button class="sharp">Sharp</button>
+                            <button class="not-sharp">Not Sharp</button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="more">
+                    <a href="#">More Reviews</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

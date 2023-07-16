@@ -1,0 +1,112 @@
+{% extends "nma-base.html" %}
+{% load static %}
+
+{%block title %}
+Name  | NMA Printer user / admin
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="admin">
+        <div class="container">
+            <div class="admin_content">
+                <div>
+                    <div class="history">
+                        <h2 class="head">History</h2>
+                        <ul>
+                            <li>Sweater Jean - 20/08/23</li>
+                            <li>Sweater Jean - 20/08/23</li>
+                            <li>Sweater Jean - 20/08/23</li>
+                        </ul>
+                        <h2 class="head">Reviews</h2>
+                        <ul>
+                            <li>
+                                <a href="#">Sweater Jean - awesome jeams</a>
+                            </li>
+                            <li>
+                                <a href="#">Sweater Jean - awesome jeams</a>
+                            </li>
+                            <li>
+                                <a href="#">Sweater Jean - awesome jeams</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="admin-info">
+                        <div class="profile">
+                            <div class="image"></div>
+                            <span>role</span>
+                        </div>
+                        <h2 class="admin-name">Sanele Mngadi</h2>
+                        <p class="admin-bio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, voluptas culpa. Natus provident labore, eos voluptates corrupti cupiditate ad, sequi, magni fugit laboriosam debitis! Nemo debitis hic doloremque eligendi quisquam blanditiis illum quidem, possimus vitae dicta facere sapiente repellat libero soluta eum mollitia architecto, quos a odit. Aut eaque hic ducimus tempore nesciunt, odit expedita quibusdam nemo, provident recusandae possimus ratione rem itaque repellendus ut nostrum nam tenetur adipisci dolorum accusantium fugit quis, labore illo. Ullam, magni! Atque ipsa nulla odio quis neque optio obcaecati expedita ratione quaerat, eum ab eos debitis molestias, eligendi porro tempora dicta aliquid ducimus dolor?</p>
+                    </div>
+    
+                    <div class="personal-details">
+                        <h2 class="heading">Personal Details</h2>
+                        <div class="details">
+                            <ul class="admin">
+                                <li>
+                                    <div>
+                                        <h3>Your Name</h3>
+                                        <p>Sanele Mngadi</p>
+                                    </div>
+                                    <button>Edit</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <h3>Your Email</h3>
+                                        <p>sanelemngadi17@gmail.com</p>
+                                    </div>
+                                    <button>Edit</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <h3>Password</h3>
+                                        <p>*******</p>
+                                    </div>
+                                    <button>Edit</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="admin-working_hours">
+                        <h3 class="heading">Working hours <button>Edit</button></h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="working-days" id="mon">
+                                <label for="mon">Mon</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="working-days" id="tue">
+                                <label for="tue">Tue</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="working-days" id="wed">
+                                <label for="wed">Wed</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="working-days" id="thur">
+                                <label for="thur">Thur</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="working-days" id="fri">
+                                <label for="fri">Fri</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="working-days" id="sat" disabled>
+                                <label for="sat">Sat</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="working-days" id="sun" checked disabled>
+                                <label for="sat">Sat</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

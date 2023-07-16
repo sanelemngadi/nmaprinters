@@ -1,0 +1,47 @@
+{% extends "nma-base.html" %}
+{% load static %}
+
+{%block title %}
+Shop | NMA Printers
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <div class="store-hero">
+            <div class="store-hero_categories">
+               <div style="position: sticky; top: 1rem;">
+                <!-- {% include "home/filters.html" %} -->
+                {% include "home/categories.html" %}
+               </div>
+            </div>
+            <section class="store-hero_items">
+                {% include "home/filter-tab.html" %}
+
+                <div id="headlines">
+                    <h1 class="category-heading">
+                    Categories
+                    </h1>
+                    <p id="category-filter">
+                        <span class="cat">
+                            T shirt&#10095; 
+                            <span>Long Sleeve</span>
+                        </span> &#10095; 
+                        <span class="fil">Women</span>
+                    </p>
+                </div>
+                {% include "home/store-cards.html" %}
+            </section>
+        </div>
+
+    </div>
+    <div class="more-items"><a href="#">More items</a></div>
+    <div id="scroller">
+        <img 
+        src="{% static 'vectors/dropdown.svg' %}" 
+        width="32" 
+        height="32"
+        alt="">
+    </div>
+</main>
+{% endblock %}

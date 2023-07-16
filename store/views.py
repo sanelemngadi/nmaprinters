@@ -15,3 +15,22 @@ def contact_view(request):
 
 def about_view(request):
     return render(request, "pages/about.html",{})
+
+def bulk_order_view(request):
+    return render(request, "pages/bulk-order.html",{})
+
+def design_view(request):
+    return render(request, "pages/design.html",{})
+
+def shop_view(request):
+    return render(request, "pages/shop.html",{})
+
+def product_detail_view(request):
+    return render(request, "pages/product-detail.html",{})
+
+def admin_view(request):
+    return render(request, "pages/admin.html",{})
+
+    
+def cart_view(request):
+    return render(request, "pages/cart.html",{})

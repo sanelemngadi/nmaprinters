@@ -16,8 +16,8 @@
                     <li class="links"><a href="{% url 'services' %}">Services</a></li>
                     <li class="links"><a href="{% url 'about-us' %}">About</a></li>
                     <li class="links"><a href="{% url 'contact-us' %}">Contact</a></li>
-                    <li class="links-icons"><a href="#"><i class="fa-regular fa-user"></i></a></li>
-                    <li class="links-icons"><a href="#">
+                    <li class="links-icons"><a href="{% url 'admin' %}"><i class="fa-regular fa-user"></i></a></li>
+                    <li class="links-icons"><a href="{% url 'cart' %}">
                         <i class="fa-regular fa-cart-shopping"></i>
                     </a></li>
                  </ul>
@@ -25,15 +25,15 @@
         </div>
     </div>
     <div class="cta">
-        <a href="#">
+        <a href="{% url 'shop' %}">
             <h2>Shop</h2>
             <p>Get our ready made designs</p>
         </a>
-        <a href="#">
+        <a href="{% url 'design' %}">
             <h2>Design</h2>
             <p>Get custom designs</p>
         </a>
-        <a href="#">
+        <a href="{% url 'bulk-order' %}">
             <h2>Order in bulk</h2>
             <p>Get a quote</p>
         </a>
